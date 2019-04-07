@@ -1,0 +1,26 @@
+{% extends 'food/base.html' %}
+
+{% block content %}
+
+    {% if user.is_authenticated %}
+
+        {% if snack_list %}
+
+            {% for snack in snack_list %}
+
+                <li>{{ snack }}</li>
+
+
+            {% endfor %}
+
+        {% endif %}
+
+
+    {% else %}
+        <p>You are not logged in</p>
+        <a href="{% url 'login' %}">login</a>
+    {% endif %}
+
+
+
+{% endblock %}
