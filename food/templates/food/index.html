@@ -1,33 +1,25 @@
 {% extends 'food/base.html' %}
 
 {% block content %}
-<div class = "container-fluid">
+    <div class="container-fluid">
 
-
-    {% if user.is_authenticated %}
-         <div class="text-center">
-                    <h1>Snacks</h1>
-                    {% if snacks %}
-                        {% for snack in snacks %}
-                            <li><a href="{% url 'food:snack_details' snack.id %}">{{ snack }}</a> </li>
-                        {% endfor %}
-                    {% endif %}
-                    {% if stores %}
-                        <h1>Stores</h1>
-                        {% for store in stores %}
-                            <li><a href="{% url 'food:store_details' store.id %}">{{ store }}</a> </li>
-                        {% endfor %}
-                    {% endif %}
-                    <button class="btn btn-md btn-primary"> <a class="text-white" href="{% url 'food:create_snack' %}">Add Snack</a></button>
-                    <button class="btn btn-md btn-primary"><a class="text-white" href="{% url 'food:create_store' %}">Add Store</a></button>
-         </div>
-    {% else %}
         <div class="text-center">
-            <p>Please login to view snacks and stores.</p>
-            <a href="{% url 'login' %}">login</a>
+            <h1>Snacks</h1>
+            {% if snacks %}
+                {% for snack in snacks %}
+                    <li><a href="{% url 'food:snack_details' snack.id %}">{{ snack }}</a></li>
+                {% endfor %}
+            {% endif %}
+            {% if stores %}
+                <h1>Stores</h1>
+                {% for store in stores %}
+                    <li><a href="{% url 'food:store_details' store.id %}">{{ store }}</a></li>
+                {% endfor %}
+            {% endif %}
+            <button class="btn btn-md btn-primary"><a class="text-white" href="{% url 'food:create_snack' %}">Add
+                Snack</a></button>
+            <button class="btn btn-md btn-primary"><a class="text-white" href="{% url 'food:create_store' %}">Add
+                Store</a></button>
         </div>
-
-    {% endif %}
-
-</div>
+    </div>
 {% endblock %}

@@ -5,10 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-8 text-center">
             <h1>{{ snack.name }}</h1>
-            <h1>{{ snack.store.name }}</h1>
-            <h1>{{ snack.date_created }}</h1>
-            <h1>{{ snack.sale }}</h1>
-            <h1>{{ snack.id }}</h1>
+            <h3>{{ snack.store.name }}</h3>
+            {% if snack.sale %}
+                <h6>{{ snack }} was on sale.</h6>
+            {% endif %}
+            <h1>{{ snack.pretty_price_string }}</h1>
         </div>
     </div>
 
