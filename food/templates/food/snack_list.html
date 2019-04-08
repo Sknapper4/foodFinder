@@ -1,6 +1,10 @@
 {% extends 'food/base.html' %}
 
 {% block content %}
+
+    {% if user.is_authenticated %}
+
+
     <div class="text-center">
    {% if snacks %}
        {% for snack in snacks %}
@@ -8,4 +12,13 @@
        {% endfor %}
    {% endif %}
     </div>
+
+    {% else %}
+        <div class="text-center">
+            <p>Please login to view snacks!</p>
+            <a href="{% url 'login' %}">login</a>
+        </div>
+    {% endif %}
+
+
 {% endblock %}

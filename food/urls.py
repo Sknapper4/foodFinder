@@ -1,4 +1,6 @@
 from django.urls import path
+from django.contrib import admin
+from django.urls import path, include # new
 
 from . import views
 
@@ -11,4 +13,7 @@ urlpatterns = [
     path('store/<int:store_id>/', views.store_detail, name='store_details'),
     path('snack/create_snack/', views.create_snack, name='create_snack'),
     path('store/create_store/', views.create_store, name='create_store'),
+    path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')), # new
+
 ]
