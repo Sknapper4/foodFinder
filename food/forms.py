@@ -5,7 +5,7 @@ from .models import Snack, Store
 class CreateSnack(forms.ModelForm):
     class Meta:
         model = Snack
-        exclude = ['date_created']
+        exclude = ['date_found', 'author']
 
 
 class CreateStore(forms.ModelForm):

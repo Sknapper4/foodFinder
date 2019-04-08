@@ -52,9 +52,11 @@ def store_detail(request, store_id):
 
 @login_required()
 def create_snack(request):
-    return HttpResponse("create snack")
+    form = CreateSnack()
+    return render(request, 'food/create_snack.html', {'form': form})
 
 
 @login_required()
 def create_store(request):
-    return HttpResponse("create store")
+    form = CreateStore()
+    return render(request, 'food/create_store.html', {'form': form})
