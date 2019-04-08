@@ -1,0 +1,11 @@
+{% extends 'food/base.html' %}
+
+{% block content %}
+    <div class="text-center">
+   {% if snacks %}
+       {% for snack in snacks %}
+           <li><a href="{% url 'food:snack_details' snack.id %}">{{ snack }}</a></li>
+       {% endfor %}
+   {% endif %}
+    </div>
+{% endblock %}

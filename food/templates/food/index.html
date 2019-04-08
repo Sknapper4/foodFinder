@@ -2,25 +2,21 @@
 
 {% block content %}
 
-    {% if user.is_authenticated %}
-
-        {% if snack_list %}
-
-            {% for snack in snack_list %}
-
-                <li>{{ snack }}</li>
-
-
-            {% endfor %}
-
-        {% endif %}
-
-
-    {% else %}
-        <p>You are not logged in</p>
-        <a href="{% url 'login' %}">login</a>
-    {% endif %}
-
-
+        <div class="text-center">
+            <h1>Snacks</h1>
+            {% if snacks %}
+                {% for snack in snacks %}
+                    <li><a href="{% url 'food:snack_details' snack.id %}">{{ snack }}</a> </li>
+                {% endfor %}
+            {% endif %}
+            {% if stores %}
+                <h1>Stores</h1>
+                {% for store in stores %}
+                    <li><a href="{% url 'food:store_details' store.id %}">{{ store }}</a> </li>
+                {% endfor %}
+            {% endif %}
+            <button class="btn btn-md btn-primary"> <a class="text-white" href="{% url 'food:create_snack' %}">Add Snack</a></button>
+            <button class="btn btn-md btn-primary"><a class="text-white" href="{% url 'food:create_store' %}">Add Store</a></button>
+        </div>
 
 {% endblock %}

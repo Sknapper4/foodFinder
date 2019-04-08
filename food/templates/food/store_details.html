@@ -1,0 +1,13 @@
+{% extends 'food/base.html' %}
+
+{% block content %}
+    <div class="row justify-content-center">
+        <div class="col-6 text-center">
+            <h1>{{ store.name }}</h1>
+            <h1>{{ store.city }}</h1>
+            {% for snack in store.snacks.all %}
+                <li>{{ snack }}</li>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
