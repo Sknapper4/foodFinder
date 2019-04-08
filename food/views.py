@@ -7,7 +7,7 @@ from .models import Snack, Store
 
 @login_required()
 def index(request):
-    snacks = Snack.objects.all()[:5]
+    snacks = Snack.objects.all()
     stores = Store.objects.all()
     template = loader.get_template('food/index.html')
     context = {
