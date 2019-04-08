@@ -3,6 +3,7 @@ from django.shortcuts import render, get_object_or_404
 from django.template import loader
 from django.contrib.auth.decorators import login_required
 from .models import Snack, Store
+from .forms import CreateStore, CreateSnack
 
 
 @login_required()
