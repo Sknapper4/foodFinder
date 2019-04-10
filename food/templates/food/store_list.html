@@ -3,7 +3,7 @@
 {% block content %}
 
     <div class="row justify-content-center mt-5">
-        <div class="col-6 text-center shadow justify-content-center">
+        <div class="col-8 text-center shadow justify-content-center">
         <div class="m-5">
         <h3 class="mb-4">Store List</h3>
             {% if stores %}
@@ -14,13 +14,13 @@
                 </tr>
                 {% for store in stores %}
                     <tr class="border text-left">
-                    <td class="border col-4"><a href="{% url 'food:store_details' store.id %}">{{ store }}</a></td>
-                    <td class="border col-2">{{ store.city }}</td>
+                    <td class="border col-2"><a href="{% url 'food:store_details' store.id %}">{{ store }}</a></td>
+                    <td class="border col-1">{{ store.city }}</td>
                     </tr>
                 {% endfor %}
                 </table>
             {% endif %}
-        <button class="btn btn-md btn-primary mt-5 "><a class="text-white" href="{% url 'food:create_store' %}">Add Store</a></button>
+            <a class="text-white btn btn-md btn-primary mt-3" href="{% url 'food:create_store' %}">Add Store</a>
         </div>
         </div>
     </div>

@@ -16,13 +16,17 @@
                         <div class="col-4"><strong>Date</strong></div>
                         <div class="col-4">{{ snack.date_found.date}}</div>
                     </div>
+                    <div class="row justify-content-center m-2">
+                        <div class="col-4"><strong>Created By</strong></div>
+                        <div class="col-4">{% if snack.snack_author %}{{ snack.snack_author }}{% else %}Admin{% endif %}</div>
+                    </div>
                 </div>
                 <div class="mt-5">
-                    <h4>{{ snack.store.name }}</h4>
+                    <h4>{{ snack.store.name }} in {{ snack.store.city }}</h4>
                     <hr class="w-50">
                     {% for other_snack in snack.store.snack_set.all %}
                         {% if not other_snack.name == snack.name %}
-                            <h6>{{ other_snack }}</h6>
+                            <h6><a href="{% url 'food:snack_details' other_snack.id %}">{{ other_snack }}</a></h6>
                         {% endif %}
                     {% endfor %}
                 </div>
