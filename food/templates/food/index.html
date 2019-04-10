@@ -1,29 +1,31 @@
 {% extends 'food/base.html' %}
 
+<style>
+</style>
 {% block content %}
     <div class="container-fluid">
 
         <div class="row justify-content-center mt-5">
-        <div class="col-6 text-center">
-            <h1>Snacks</h1>
-            {% if snacks %}
-                {% for snack in snacks %}
-                    <li><a href="{% url 'food:snack_details' snack.id %}">{{ snack }}</a></li>
-                {% endfor %}
-            {% endif %}
-        </div>
-        <div class="col-6 text-center">
-            <h1>Stores</h1>
-            {% if stores %}
-                {% for store in stores %}
-                    <li><a href="{% url 'food:store_details' store.id %}">{{ store }}</a></li>
-                {% endfor %}
-            {% endif %}
-        </div>
-        <button class="btn btn-md btn-primary"><a class="text-white" href="{% url 'food:create_snack' %}">Add
-                Snack</a></button>
-            <button class="btn btn-md btn-primary"><a class="text-white" href="{% url 'food:create_store' %}">Add
-                Store</a></button>
+            <div class="col-6 text-center shadow m-2">
+                <h1>Snacks</h1>
+                {% if snacks %}
+                    {% for snack in snacks %}
+                        <li><a href="{% url 'food:snack_details' snack.id %}">{{ snack }}</a></li>
+                    {% endfor %}
+                {% endif %}
+                <button class="btn btn-md btn-primary m-2"><a class="text-white" href="{% url 'food:create_snack' %}">Add
+                    Snack</a></button>
+            </div>
+            <div class="col-6 text-center shadow m-2 mt-4">
+                <h1>Stores</h1>
+                {% if stores %}
+                    {% for store in stores %}
+                        <li><a href="{% url 'food:store_details' store.id %}">{{ store }}</a></li>
+                    {% endfor %}
+                {% endif %}
+                <button class="btn btn-md btn-primary m-2 "><a class="text-white" href="{% url 'food:create_store' %}">Add
+                    Store</a></button>
+            </div>
         </div>
 
     </div>

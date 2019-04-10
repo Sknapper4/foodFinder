@@ -4,6 +4,7 @@ from django.template import loader
 from django.contrib.auth.decorators import login_required
 from .models import Snack, Store
 from .forms import CreateStore, CreateSnack
+from django.contrib.auth.models import User
 
 
 @login_required()
@@ -52,6 +53,13 @@ def store_detail(request, store_id):
 
 @login_required()
 def create_snack(request):
+    if request.method == 'POST':
+        form = CreateSnack(request.POST)
+        if form.is_valid():
+            form.save(commit=False)
+            author = User.username
+            form.data['author'] = author
+            form.cl
     form = CreateSnack()
     return render(request, 'food/create_snack.html', {'form': form})
 
