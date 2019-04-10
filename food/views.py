@@ -1,10 +1,9 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.template import loader
 from django.contrib.auth.decorators import login_required
 from .models import Snack, Store
 from .forms import CreateStore, CreateSnack
-from django.contrib.auth.models import User
 
 
 @login_required()
@@ -21,7 +20,7 @@ def index(request):
 
 @login_required()
 def snack_list(request):
-    snacks = Snack.objects.all()[:5]
+    snacks = Snack.objects.all()[:25]
     template = loader.get_template('food/snack_list.html')
     context = {
         'snacks': snacks
@@ -56,15 +55,22 @@ def create_snack(request):
     if request.method == 'POST':
         form = CreateSnack(request.POST)
         if form.is_valid():
-            form.save(commit=False)
-            author = User.username
-            form.data['author'] = author
-            form.cl
-    form = CreateSnack()
-    return render(request, 'food/create_snack.html', {'form': form})
+            new_snack = form.save(commit=False)
+            new_snack.snack_author = request.user
+            new_snack.save()
+            return HttpResponseRedirect('/food/')
+    else:
+        form = CreateSnack()
+        return render(request, 'food/create_snack.html', {'form': form})
 
 
 @login_required()
 def create_store(request):
-    form = CreateStore()
-    return render(request, 'food/create_store.html', {'form': form})
+    if request.method == 'POST':
+        form = CreateStore(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/food/')
+    else:
+        form = CreateStore()
+        return render(request, 'food/create_store.html', {'form': form})

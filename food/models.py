@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.conf import settings
 
 
 class Store(models.Model):
@@ -16,7 +16,7 @@ class Snack(models.Model):
     price = models.DecimalField(default=1.00, decimal_places=2, max_digits=6)
     date_found = models.DateTimeField(auto_now_add=True, blank=True)
     sale = models.BooleanField(default=False)
-    author = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)
+    snack_author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return f'%s' % self.name

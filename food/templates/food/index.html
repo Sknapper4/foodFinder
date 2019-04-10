@@ -10,7 +10,7 @@
                 <h1>Snacks</h1>
                 {% if snacks %}
                     {% for snack in snacks %}
-                        <li><a href="{% url 'food:snack_details' snack.id %}">{{ snack }}</a></li>
+                        <li><a href="{% url 'food:snack_details' snack.id %}">{{ snack }}</a> - ${{ snack.price }}</li>
                     {% endfor %}
                 {% endif %}
                 <button class="btn btn-md btn-primary m-2"><a class="text-white" href="{% url 'food:create_snack' %}">Add
