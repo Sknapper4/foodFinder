@@ -31,6 +31,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'food:store_list' %}">Stores</a>
             </li>
+            {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'food:my_snacks' %}">My Snacks</a>
+                </li>
+            {% endif %}
         </ul>
         {% if user.is_authenticated %}
         <ul class="navbar-nav ml-auto">

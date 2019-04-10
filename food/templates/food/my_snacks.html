@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-6 text-center shadow">
+            <div class="m-3">
+                <div class="m-5">
+                    <h6 class="text-muted">Snacks created by</h6>
+                    <h1>{{ user }}</h1>
+                </div>
+                {% if users_snacks %}
+                    <table class="border mx-auto w-100">
+                    <tr class="border">
+                        <td class="border">Snack</td>
+                        <td class="border">Price</td>
+                        <td class="border">Where from</td>
+                        <td class="border">When</td>
+                    </tr>
+                    {% for snack in users_snacks %}
+                        <tr class="border">
+                        <td class="border">{{ snack }}</td>
+                        <td class="border">{{ snack.pretty_price_string }}</td>
+                        <td class="border">{{ snack.store }}</td>
+                        <td class="border">{{ snack.date_found.date }}</td>
+                        </tr>
+                    {% endfor %}
+                    </table>
+                {% else %}
+                    <h4>You have added no snacks</h4>
+                {% endif %}
+                <button class="btn btn-primary mt-5"><a class="text-white" href="{% url 'food:create_snack' %}">Create
+                    Snack</a>
+                </button>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -14,6 +14,6 @@ urlpatterns = [
     path('snack/create_snack/', views.create_snack, name='create_snack'),
     path('store/create_store/', views.create_store, name='create_store'),
     path('admin/', admin.site.urls),
-    path('accounts/', include('django.contrib.auth.urls')), # new
-
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('my_snacks/', views.user_snacks, name='my_snacks'),
 ]

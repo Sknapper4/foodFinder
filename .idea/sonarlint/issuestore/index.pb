@@ -25,3 +25,7 @@ F
 foodFinder/settings.py,7/e/7ed4db0f29a98138bd928bb678db9cbb9ed41e36
 >
 food/models.py,8/7/870f7d0c8f5ffeafa913d4e9294e528c62d38bb1
+L
+static/css/custom-styles.css,4/2/429017bd57476256b9ae38357e594a23e74fb400
+V
+&food/templates/food/store_details.html,f/8/f8f0ab75870ca1f326879a11433ffb9c59d09465

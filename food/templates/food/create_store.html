@@ -4,12 +4,12 @@
 {% block content %}
 
     <div class="row justify-content-center mt-5">
-        <div class="col-2">
+        <div class="col-lg-3 col-md-4 col-8 shadow p-2" style="margin-top: 6rem">
             {% if form %}
                 <form method="post">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <button type="submit" value="submit">Submit</button>
+                    <button class="btn btn-primary m-2" type="submit" value="submit">Submit</button>
                 </form>
             {% endif %}
         </div>

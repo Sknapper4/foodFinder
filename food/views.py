@@ -51,6 +51,16 @@ def store_detail(request, store_id):
 
 
 @login_required()
+def user_snacks(request):
+    users_snacks = Snack.objects.filter(snack_author=request.user)
+    context = {
+        'users_snacks': users_snacks
+    }
+
+    return render(request, 'food/my_snacks.html', context)
+
+
+@login_required()
 def create_snack(request):
     if request.method == 'POST':
         form = CreateSnack(request.POST)
