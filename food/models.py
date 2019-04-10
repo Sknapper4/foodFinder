@@ -7,7 +7,7 @@ class Store(models.Model):
     city = models.CharField(max_length=255)
 
     def __str__(self):
-        return f'%s in %s' % (self.name, self.city)
+        return f'%s' % self.name
 
 
 class Snack(models.Model):

@@ -4,24 +4,31 @@
 
 
     <div class="row justify-content-center mt-5">
-        <div class="col-4 text-center shadow justify-content-center">
-        <div class="m-5">
-        <h3 class="mb-4">Snack List</h3>
-            {% if snacks %}
-                <table class="border mx-auto">
-                <tr class="border">
-                    <td class="border"><h6>Name</h6></td>
-                    <td class="border"><h6>Price</h6></td>
-                </tr>
-                {% for snack in snacks %}
-                    <tr class="border text-left">
-                    <td class="border col-8"><a href="{% url 'food:snack_details' snack.id %}">{{ snack }}</a></td>
-                    <td class="border col-6">${{ snack.price }}</td>
-                    </tr>
-                {% endfor %}
-                </table>
-            {% endif %}
-        </div>
+        <div class="col-6 text-center shadow justify-content-center">
+            <div class="m-5">
+                <h3 class="mb-4">Snack List</h3>
+                {% if snacks %}
+                    <table class="border mx-auto">
+                        <tr class="border">
+                            <td class="border"><h6>Name</h6></td>
+                            <td class="border"><h6>Price</h6></td>
+                            <td class="border"><h6>Store</h6></td>
+                            <td class="border"><h6>On Sale</h6></td>
+                        </tr>
+                        {% for snack in snacks %}
+                            <tr class="border text-left">
+                                <td class="border col-4"><a
+                                        href="{% url 'food:snack_details' snack.id %}">{{ snack }}</a></td>
+                                <td class="border col-2">${{ snack.price }}</td>
+                                <td class="border col-4">{{ snack.store }} - {{ snack.store.city }}</td>
+                                <td class="border">{% if snack.sale %} Yes {% else %} No {% endif %}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                {% endif %}
+                <button class="btn btn-md btn-primary mt-5 "><a class="text-white" href="{% url 'food:create_snack' %}">Add
+                    Snack</a></button>
+            </div>
         </div>
     </div>
 

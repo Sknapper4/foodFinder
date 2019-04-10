@@ -2,20 +2,27 @@
 
 {% block content %}
 
-    {% if user.is_authenticated %}
-
-    <div class="text-center">
-    {% if stores %}
-        {% for store in stores %}
-            <li><a href="{% url 'food:store_details' store.id %}">{{ store }}</a></li>
-        {% endfor %}
-    {% endif %}
+    <div class="row justify-content-center mt-5">
+        <div class="col-6 text-center shadow justify-content-center">
+        <div class="m-5">
+        <h3 class="mb-4">Store List</h3>
+            {% if stores %}
+                <table class="border mx-auto">
+                <tr class="border">
+                    <td class="border"><h6>Store</h6></td>
+                    <td class="border"><h6>City</h6></td>
+                </tr>
+                {% for store in stores %}
+                    <tr class="border text-left">
+                    <td class="border col-4"><a href="{% url 'food:store_details' store.id %}">{{ store }}</a></td>
+                    <td class="border col-2">{{ store.city }}</td>
+                    </tr>
+                {% endfor %}
+                </table>
+            {% endif %}
+        <button class="btn btn-md btn-primary mt-5 "><a class="text-white" href="{% url 'food:create_store' %}">Add Store</a></button>
+        </div>
+        </div>
     </div>
 
-    {% else %}
-        <div class="text-center">
-            <p>Please login to view stores!</p>
-            <a href="{% url 'login' %}">login</a>
-        </div>
-    {% endif %}
 {% endblock %}
