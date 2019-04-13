@@ -21,9 +21,9 @@
                    <tbody>
                         {% for snack in snacks %}
                             <tr class="text-left">
-                                <td><a href="{% url 'food:snack_details' snack.id %}">{{ snack }}</a></td>
+                                <td><a class="text-white" href="{% url 'food:snack_details' snack.id %}">{{ snack }}</a></td>
                                 <td>${{ snack.price }}</td>
-                                <td><a href="{% url 'food:store_details' snack.store.id %}"> {{ snack.store }}</a> - {{ snack.store.city }}</td>
+                                <td><a class="text-white" href="{% url 'food:store_details' snack.store.id %}"> {{ snack.store }}</a> - <a class="text-white" href="{% url 'food:city_details' snack.store.id %}">{{ snack.store.city }}</a></td>
                                 <td>{% if snack.sale %} Yes {% else %} No {% endif %}</td>
                             </tr>
                         {% endfor %}

@@ -87,7 +87,16 @@ def create_store(request):
         return render(request, 'food/create_store.html', {'form': form})
 
 
-#testing filters
 def snack_search(request):
-    f = SnackFilter(request.GET, queryset=Snack.objects.all())
-    return render(request, 'food/find_snack.html', {'filter': f})
+    filter = SnackFilter(request.GET, queryset=Snack.objects.all())
+    return render(request, 'food/find_snack.html', {'filter': filter})
+
+
+def city_details(request, store_id):
+    store_city = get_object_or_404(Store, pk=store_id)
+    city_store_list = Store.objects.filter(city=store_city.city)
+    context = {
+        'store_city': store_city,
+        'city_store_list': city_store_list,
+    }
+    return render(request, 'food/city_detail.html', context)
