@@ -2,23 +2,18 @@
 
 
 {% block content %}
-
     <div class="row justify-content-center mt-5">
-        <div class="col-4 text-center shadow justify-content-center">
+        <div class="col-lg-4 col-md-6 col-10 text-center shadow justify-content-center">
             <div class="m-5">
-                {% if store_city %}
-                    <h3 class="mb-2">Stores in {{ store_city.city }} </h3>
+                <h3 class="mb-2">City List</h3>
                 <a class="text-white btn btn-md btn-primary mb-3" href="{% url 'food:create_store' %}">Add a Store</a>
+                {% if city_list %}
                     <table class="table table-dark">
-                        <thead>
-                        <tr>
-                            <th scope="col"><h3>Store</h3></th>
-                        </tr>
-                        </thead>
                         <tbody>
-                        {% for store in city_store_list %}
+                        {% for store in city_list %}
                             <tr>
-                                <td><a href="{% url 'food:store_details' store.id %}">{{ store }}</a></td>
+                                <td><a class="text-white"
+                                       href="{% url 'food:city_details' store.id %}">{{ store.city }}</a></td>
                             </tr>
                         {% endfor %}
                         </tbody>
@@ -28,5 +23,4 @@
             </div>
         </div>
     </div>
-
 {% endblock %}

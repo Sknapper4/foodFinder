@@ -35,6 +35,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'food:store_list' %}">Stores</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'food:cities' %}">Cities</a>
+            </li>
             {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'food:my_snacks' %}">My Snacks</a>

@@ -92,6 +92,11 @@ def snack_search(request):
     return render(request, 'food/find_snack.html', {'filter': filter})
 
 
+def cities(request):
+    city_list = Store.objects.all()
+    return render(request, 'food/cities.html', {'city_list': city_list})
+
+
 def city_details(request, store_id):
     store_city = get_object_or_404(Store, pk=store_id)
     city_store_list = Store.objects.filter(city=store_city.city)
