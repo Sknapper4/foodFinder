@@ -26,7 +26,7 @@
                     <hr class="w-50">
                     {% for other_snack in snack.store.snack_set.all %}
                         {% if not other_snack.name == snack.name %}
-                            <h6><a href="{% url 'food:snack_details' other_snack.id %}">{{ other_snack }}</a></h6>
+                            <h6><a  href="{% url 'food:snack_details' other_snack.id %}">{{ other_snack }}</a></h6>
                         {% endif %}
                     {% endfor %}
                 </div>

@@ -30,7 +30,7 @@
                         <tr>
                         <td>{{ obj.name }}</td>
                         <td>{{ obj.pretty_price_string }}</td>
-                        <td><a class="text-white" href="{% url 'food:store_details' obj.store.id %}"> {{ obj.store }}</a> - <a class="text-white" href="{% url 'food:city_details' obj.store.id %}">{{ obj.store.city }}</a></td>
+                        <td><a href="{% url 'food:store_details' obj.store.id %}"> {{ obj.store }}</a> - <a class="text-white" href="{% url 'food:city_details' obj.store.id %}">{{ obj.store.city }}</a></td>
 
                         </tr>
 

@@ -18,8 +18,8 @@
                <tbody>
                 {% for store in stores %}
                     <tr>
-                     <td><a class="text-white" href="{% url 'food:store_details' store.id %}">{{ store }}</a></td>
-                        <td><a class="text-white" href="{% url 'food:city_details' store.id %}" >{{ store.city }}</a></td>
+                     <td><a  href="{% url 'food:store_details' store.id %}">{{ store }}</a></td>
+                        <td><a href="{% url 'food:city_details' store.id %}" >{{ store.city }}</a></td>
                     </tr>
                 {% endfor %}
                </tbody>

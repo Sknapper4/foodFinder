@@ -93,11 +93,11 @@ def snack_search(request):
 
 
 def cities(request):
-    city_list = Store.objects.values('city').distinct()
-    store_list = Store.objects.all()
+    stores_list = Store.objects.all()
+    city_list = stores_list.values('city').distinct()
     context = {
+        'stores_list': stores_list,
         'city_list': city_list,
-        'store_list': store_list,
     }
     return render(request, 'food/cities.html', context)
 
