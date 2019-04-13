@@ -4,12 +4,13 @@ from django.template import loader
 from django.contrib.auth.decorators import login_required
 from .models import Snack, Store
 from .forms import CreateStore, CreateSnack
+from .filters import SnackFilter
 
 
 @login_required()
 def index(request):
-    snacks = Snack.objects.all()
-    stores = Store.objects.all()
+    snacks = Snack.objects.all()[:30]
+    stores = Store.objects.all()[:30]
     template = loader.get_template('food/index.html')
     context = {
         'snacks': snacks,
@@ -84,3 +85,9 @@ def create_store(request):
     else:
         form = CreateStore()
         return render(request, 'food/create_store.html', {'form': form})
+
+
+#testing filters
+def snack_search(request):
+    f = SnackFilter(request.GET, queryset=Snack.objects.all())
+    return render(request, 'food/find_snack.html', {'filter': f})

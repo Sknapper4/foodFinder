@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'food/base.html' %}
 
 
 {% block content %}
@@ -9,29 +9,37 @@
                 <div class="m-5">
                     <h6 class="text-muted">Snacks created by</h6>
                     <h1>{{ user }}</h1>
+                    <a class="text-white btn btn-md btn-primary mt-3" href="{% url 'food:create_snack' %}">Add a Snack</a>
                 </div>
                 {% if users_snacks %}
-                    <table class="border mx-auto w-100">
-                    <tr class="border">
-                        <td class="border">Snack</td>
-                        <td class="border">Price</td>
-                        <td class="border">Where from</td>
-                        <td class="border">When</td>
-                    </tr>
+                    <table class="table table-dark">
+                     <thead>
+                        <tr>
+                            <th scope="col">Snack</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Store</th>
+                            <th scope="col">Date Purchased</th>
+                        </tr>
+                      </thead>
+                    <tbody>
                     {% for snack in users_snacks %}
-                        <tr class="border">
-                        <td class="border">{{ snack }}</td>
-                        <td class="border">{{ snack.pretty_price_string }}</td>
-                        <td class="border">{{ snack.store }}</td>
-                        <td class="border">{{ snack.date_found.date }}</td>
+                        <tr>
+                        <td>{{ snack }}</td>
+                        <td>{{ snack.pretty_price_string }}</td>
+                        <td>{{ snack.store }}</td>
+                        <td>{{ snack.date_found.date }}</td>
                         </tr>
                     {% endfor %}
+
+
+
+                    </tbody>
+
                     </table>
                 {% else %}
                     <h4>You have added no snacks</h4>
                 {% endif %}
-                <a class="text-white btn btn-md btn-primary mt-3" href="{% url 'food:create_snack' %}">Create
-                    Snack</a>
+
             </div>
         </div>
     </div>

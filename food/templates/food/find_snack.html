@@ -1,0 +1,43 @@
+{% extends 'food/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <div class="container-fluid">
+
+
+    <div class="row justify-content-center">
+        <div class="col-lg-3 col-md-6 col-10 shadow p-2" style="margin-top: 6rem">
+
+
+        <form action="" method="get">
+            {{ filter.form.as_p }}
+            {{ form|crispy  }}
+            <button class="btn btn-primary m-2" type="submit" value="submit">Search</button>
+        </form>
+
+            <table class="border mx-auto w-100">
+                    <tr class="border">
+                        <td class="border">Snack</td>
+                        <td class="border">Price</td>
+                        <td class="border">Store</td>
+                    </tr>
+
+    {% for obj in filter.qs %}
+
+                        <tr class="border">
+                        <td class="border">{{ obj.name }}</td>
+                        <td class="border">{{ obj.pretty_price_string }}</td>
+                        <td class="border"><a href="{% url 'food:store_details' obj.store.id %}"> {{ obj.store }}</a> - {{ obj.store.city }}</td>
+
+                        </tr>
+
+    {% endfor %}
+</table>
+
+
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

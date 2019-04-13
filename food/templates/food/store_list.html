@@ -3,24 +3,29 @@
 {% block content %}
 
     <div class="row justify-content-center mt-5">
-        <div class="col-8 text-center shadow justify-content-center">
+     <div class="col-4 text-center shadow justify-content-center">
         <div class="m-5">
-        <h3 class="mb-4">Store List</h3>
+        <h3 class="mb-2">Store List</h3>
+        <a class="text-white btn btn-md btn-primary mb-3" href="{% url 'food:create_store' %}">Add a Store</a>
             {% if stores %}
-                <table class="border mx-auto">
-                <tr class="border">
-                    <td class="border"><h6>Store</h6></td>
-                    <td class="border"><h6>City</h6></td>
+               <table class="table table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">Store</th>
+                  <th scope="col">City</th>
                 </tr>
+              </thead>
+               <tbody>
                 {% for store in stores %}
-                    <tr class="border text-left">
-                    <td class="border col-2"><a href="{% url 'food:store_details' store.id %}">{{ store }}</a></td>
-                    <td class="border col-1">{{ store.city }}</td>
+                    <tr>
+                     <td><a href="{% url 'food:store_details' store.id %}">{{ store }}</a></td>
+                        <td>{{ store.city }}</td>
                     </tr>
                 {% endfor %}
+               </tbody>
                 </table>
             {% endif %}
-            <a class="text-white btn btn-md btn-primary mt-3" href="{% url 'food:create_store' %}">Add Store</a>
+
         </div>
         </div>
     </div>

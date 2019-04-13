@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts.apps.AccountsConfig',
     'crispy_forms',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -121,6 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = ( os.path.join('static'), )
 
 LOGIN_REDIRECT_URL = '/food'
 LOGOUT_REDIRECT_URL = '/accounts/login'
