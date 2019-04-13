@@ -29,3 +29,23 @@ L
 static/css/custom-styles.css,4/2/429017bd57476256b9ae38357e594a23e74fb400
 V
 &food/templates/food/store_details.html,f/8/f8f0ab75870ca1f326879a11433ffb9c59d09465
+U
+%food/templates/food/create_store.html,c/e/ce01a121484600874baca9459f512f1931947b9c
+@
+requirements.txt,1/9/19359a61ae2446b51b549167b014da2fcf265768
+L
+accounts/templates/base.html,4/a/4a280f39a0152ef3521d6639d39e51309e86d9a3
+Z
+*accounts/templates/registration/login.html,1/f/1f6ea89c2f65b840484a3b8225755aa71d93901a
+N
+accounts/templates/signup.html,c/5/c5df23da53c9a3c4426112c95164abc77d0165f6
+9
+	readme.md,2/7/275d783e298228506068436512433d343feb52aa
+?
+food/filters.py,3/7/37c5850b9d07547823137d7e8456c00313539dc5
+R
+"food/templates/food/my_snacks.html,c/8/c892b88fef8f9e5c32952f3f96bd80b70a2d5c95
+T
+$food/templates/food/city_detail.html,7/4/74879b481a104bcbb56c092e5f9eb2794eb379d6
+O
+food/templates/food/cities.html,e/7/e726ff588aa1a28a9301660088b4efe45f98e416
