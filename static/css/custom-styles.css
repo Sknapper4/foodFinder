@@ -1,5 +1,5 @@
 body{
-    background-color: #1C2938;
+    background-color: #192134;
     color: white;
 }
 
@@ -9,4 +9,13 @@ body{
 
 .row-colors {
     background-color: #8D6C47;
+}
+
+.shadow{
+    background-color: #2A364C;
+    border-radius: 7px;
+}
+
+.table-dark{
+    border-radius: 7px;
 }

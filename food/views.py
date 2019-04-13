@@ -86,7 +86,7 @@ def create_store(request):
         form = CreateStore()
         return render(request, 'food/create_store.html', {'form': form})
 
-
+@login_required()
 def snack_search(request):
     filter = SnackFilter(request.GET, queryset=Snack.objects.all())
     return render(request, 'food/find_snack.html', {'filter': filter})
