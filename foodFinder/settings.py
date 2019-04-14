@@ -81,7 +81,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    },
 }
 
 
@@ -127,3 +127,7 @@ STATICFILES_DIRS = ( os.path.join('static'), )
 
 LOGIN_REDIRECT_URL = '/food'
 LOGOUT_REDIRECT_URL = '/accounts/login'
+
+# Configure Django App for Heroku
+import django_heroku
+django_heroku.settings(locals())
