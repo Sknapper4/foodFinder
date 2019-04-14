@@ -14,7 +14,6 @@ def index(request):
     context = {
         'snacks': snacks,
         'stores': stores,
-        'filter': filter,
     }
     return HttpResponse(template.render(context, request))
 
