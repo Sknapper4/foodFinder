@@ -49,3 +49,7 @@ T
 $food/templates/food/city_detail.html,7/4/74879b481a104bcbb56c092e5f9eb2794eb379d6
 O
 food/templates/food/cities.html,e/7/e726ff588aa1a28a9301660088b4efe45f98e416
+S
+#food/templates/food/find_snack.html,4/c/4cd617bd0bb90fe64d52129d6ba8e310ad571032
+8
+Procfile,b/c/bc3c68e880d1a01632bce79f69dd1387c7ba9c54
