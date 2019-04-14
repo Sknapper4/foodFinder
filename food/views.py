@@ -8,12 +8,14 @@ from .filters import SnackFilter
 
 
 def index(request):
+    filter = SnackFilter(request.GET, queryset=Snack.objects.all() + Store.objects.all())
     snacks = Snack.objects.all()[:30]
     stores = Store.objects.all()[:30]
     template = loader.get_template('food/index.html')
     context = {
         'snacks': snacks,
-        'stores': stores
+        'stores': stores,
+        'filter': filter,
     }
     return HttpResponse(template.render(context, request))
 
@@ -85,15 +87,17 @@ def create_store(request):
         form = CreateStore()
         return render(request, 'food/create_store.html', {'form': form})
 
-@login_required()
+
 def snack_search(request):
     filter = SnackFilter(request.GET, queryset=Snack.objects.all())
     return render(request, 'food/find_snack.html', {'filter': filter})
 
 
+@login_required()
 def cities(request):
     stores_list = Store.objects.all()
     city_list = stores_list.values('city').distinct()
+
     context = {
         'stores_list': stores_list,
         'city_list': city_list,
@@ -101,6 +105,7 @@ def cities(request):
     return render(request, 'food/cities.html', context)
 
 
+@login_required()
 def city_details(request, store_id):
     store_city = get_object_or_404(Store, pk=store_id)
     city_store_list = Store.objects.filter(city=store_city.city)
