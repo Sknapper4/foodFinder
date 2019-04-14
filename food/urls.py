@@ -17,6 +17,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('my_snacks/', views.user_snacks, name='my_snacks'),
-    path('cities/', views.cities, name='cities'),
+    path('cities/', views.store_search, name='cities'),
     path('store/city/<int:store_id>/', views.city_details, name='city_details'),
 ]

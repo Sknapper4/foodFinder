@@ -5,6 +5,8 @@ from django.contrib.auth.decorators import login_required
 from .models import Snack, Store
 from .forms import CreateStore, CreateSnack
 from .filters import SnackFilter
+from .filters import StoreFilter
+from django.db.models import Min
 
 
 def index(request):
@@ -89,6 +91,11 @@ def create_store(request):
 def snack_search(request):
     filter = SnackFilter(request.GET, queryset=Snack.objects.all())
     return render(request, 'food/find_snack.html', {'filter': filter})
+
+
+def store_search(request):
+    filter = StoreFilter(request.GET, queryset=Store.objects.values('city').annotate(id=Min('id')))
+    return render(request, 'food/cities.html', {'filter': filter})
 
 
 @login_required()
