@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="990d4571-bdfc-4703-b845-f62bb488b45e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food/templates/food/find_snack.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/templates/food/find_snack.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food/templates/food/snack_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/templates/food/snack_details.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,16 +41,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/food/templates/food/find_snack.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+            <state relative-caret-position="105">
+              <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/food/templates/food/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="328">
@@ -134,8 +132,8 @@
         <option value="$PROJECT_DIR$/food/templates/food/store_details.html" />
         <option value="$PROJECT_DIR$/food/templates/food/city_detail.html" />
         <option value="$PROJECT_DIR$/food/templates/food/snack_details.html" />
-        <option value="$PROJECT_DIR$/food/templates/food/find_snack.html" />
         <option value="$PROJECT_DIR$/food/templates/food/base.html" />
+        <option value="$PROJECT_DIR$/food/templates/food/find_snack.html" />
       </list>
     </option>
   </component>
@@ -255,12 +253,12 @@
       <workItem from="1554927898753" duration="3608000" />
       <workItem from="1555118968142" duration="14421000" />
       <workItem from="1555170423664" duration="1000000" />
-      <workItem from="1555251904976" duration="5035000" />
+      <workItem from="1555251904976" duration="5247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54421000" />
+    <option name="totallyTimeSpent" value="54633000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -539,17 +537,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/food/templates/food/find_snack.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/food/templates/food/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
           <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food/templates/food/find_snack.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
         </state>
       </provider>
     </entry>
