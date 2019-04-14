@@ -22,7 +22,7 @@
                         <tbody>
                         {% for obj in filter.qs %}
                             <tr>
-                                <td><a class="text-white" href="{% url 'food:city_details' obj.id %}">{{ obj.city }}</a>
+                                <td><a href="{% url 'food:city_details' obj.id %}">{{ obj.city }}</a>
                                 </td>
                             </tr>
                         {% endfor %}
