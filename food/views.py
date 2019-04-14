@@ -8,7 +8,6 @@ from .filters import SnackFilter
 
 
 def index(request):
-    filter = SnackFilter(request.GET, queryset=Snack.objects.all() + Store.objects.all())
     snacks = Snack.objects.all()[:30]
     stores = Store.objects.all()[:30]
     template = loader.get_template('food/index.html')
