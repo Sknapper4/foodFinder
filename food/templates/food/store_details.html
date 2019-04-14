@@ -12,14 +12,14 @@
                     <div class="col-6 text-left mx-auto mt-2 justify-content-center">
                         <table class="table table-dark">
                             <tr>
-                                <td class="border text-center"><h6>Snack</h6></td>
-                                <td class="border text-center"><h6>Price</h6></td>
+                                <td class="text-center"><h6>Snack</h6></td>
+                                <td class="text-center"><h6>Price</h6></td>
                             </tr>
                             {% for snack in store.snack_set.all %}
-                                <tr class="border text-left">
-                                    <td class="border col-8"><a
+                                <tr class=" text-left">
+                                    <td class=" col-8"><a
                                             href="{% url 'food:snack_details' snack.id %}">{{ snack }}</a></td>
-                                    <td class="border col-4">${{ snack.price }}</td>
+                                    <td class=" col-4">${{ snack.price }}</td>
                                 </tr>
                             {% endfor %}
                         </table>
