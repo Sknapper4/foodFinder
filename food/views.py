@@ -100,18 +100,6 @@ def store_search(request):
 
 
 @login_required()
-def cities(request):
-    stores_list = Store.objects.all()
-    city_list = stores_list.values('city').distinct()
-
-    context = {
-        'stores_list': stores_list,
-        'city_list': city_list,
-    }
-    return render(request, 'food/cities.html', context)
-
-
-@login_required()
 def city_details(request, store_id):
     store_city = get_object_or_404(Store, pk=store_id)
     city_store_list = Store.objects.filter(city=store_city.city)
