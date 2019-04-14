@@ -7,7 +7,6 @@ from .forms import CreateStore, CreateSnack
 from .filters import SnackFilter
 
 
-
 def index(request):
     snacks = Snack.objects.all()[:30]
     stores = Store.objects.all()[:30]
