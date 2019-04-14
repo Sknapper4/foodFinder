@@ -93,6 +93,7 @@ def snack_search(request):
     return render(request, 'food/find_snack.html', {'filter': filter})
 
 
+@login_required()
 def store_search(request):
     filter = StoreFilter(request.GET, queryset=Store.objects.values('city').annotate(id=Min('id')))
     return render(request, 'food/cities.html', {'filter': filter})

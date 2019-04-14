@@ -6,7 +6,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center mt-5">
             <div class="col-lg-6 col-md-8 col-12 text-center shadow justify-content-center">
-            <h3 class="mt-4">City List</h3>
+                <h3 class="mt-4">City List</h3>
                 <div class="mt-0 ml-4 mr-4 mb-4">
                     <form action="" method="get">
                         {{ filter.form.as_p }}
@@ -22,7 +22,8 @@
                         <tbody>
                         {% for obj in filter.qs %}
                             <tr>
-                                <td><a class="text-white" href="{% url 'food:city_details' obj.id %}">{{ obj.city }}</a></td>
+                                <td><a class="text-white" href="{% url 'food:city_details' obj.id %}">{{ obj.city }}</a>
+                                </td>
                             </tr>
                         {% endfor %}
                         </tbody>
