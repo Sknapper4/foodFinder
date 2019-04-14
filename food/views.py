@@ -93,21 +93,10 @@ def snack_search(request):
     return render(request, 'food/find_snack.html', {'filter': filter})
 
 
+@login_required()
 def store_search(request):
     filter = StoreFilter(request.GET, queryset=Store.objects.values('city').annotate(id=Min('id')))
     return render(request, 'food/cities.html', {'filter': filter})
-
-
-@login_required()
-def cities(request):
-    stores_list = Store.objects.all()
-    city_list = stores_list.values('city').distinct()
-
-    context = {
-        'stores_list': stores_list,
-        'city_list': city_list,
-    }
-    return render(request, 'food/cities.html', context)
 
 
 @login_required()
