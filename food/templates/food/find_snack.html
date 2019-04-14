@@ -23,7 +23,7 @@
                         <tbody>
                         {% for obj in filter.qs %}
                             <tr>
-                                <td>{{ obj.name }}</td>
+                                <td><a href="{% url 'food:snack_details' obj.id %}">{{ obj.name }}</a></td>
                                 <td>{{ obj.pretty_price_string }}</td>
                                 <td><a href="{% url 'food:store_details' obj.store.id %}"> {{ obj.store }}</a> - <a
                                         class="text-white"
