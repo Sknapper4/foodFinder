@@ -4,7 +4,7 @@
 {% block content %}
 
     <div class="row justify-content-center mt-5">
-        <div class="col-6 text-center shadow">
+        <div class="col-lg-6 col-md-8 col-10 text-center shadow">
             <div class="m-3">
                 <div class="m-5">
                     <h6 class="text-muted">Snacks created by</h6>
@@ -18,7 +18,7 @@
                             <th scope="col">Snack</th>
                             <th scope="col">Price</th>
                             <th scope="col">Store</th>
-                            <th scope="col">Date Purchased</th>
+                            <th class="d-none d-sm-block" scope="col">Date Purchased</th>
                         </tr>
                       </thead>
                     <tbody>
@@ -27,7 +27,7 @@
                         <td>{{ snack }}</td>
                         <td>{{ snack.pretty_price_string }}</td>
                         <td>{{ snack.store }}</td>
-                        <td>{{ snack.date_found.date }}</td>
+                        <td class="d-none d-sm-block">{{ snack.date_found.date }}</td>
                         </tr>
                     {% endfor %}
 
