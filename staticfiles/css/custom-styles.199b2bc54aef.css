@@ -1,0 +1,21 @@
+body{
+    background-color: #192134;
+    color: white;
+}
+
+.bg-color {
+    background-color: #382B1C;
+}
+
+.row-colors {
+    background-color: #8D6C47;
+}
+
+.shadow{
+    background-color: #2A364C;
+    border-radius: 7px;
+}
+
+.table-dark{
+    border-radius: 7px;
+}

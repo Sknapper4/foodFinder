@@ -1,2 +1,1 @@
-web: gunicorn foodFinder.wsgi
-web: gunicorn hello:app
+web: gunicorn foodFinder.wsgi --log-file -
