@@ -4,31 +4,34 @@
 
     <div class="row justify-content-center mt-5">
         <div class="col-lg-6 col-md-8 col-10 text-center shadow">
-            <div class="m-3"  style="background-color: #79aec8">
+            <div class="m-3">
                 <h2>{{ snack }}</h2>
                 <hr class="w-50">
-                <div class="mt-3">
-                    <div class="row justify-content-center m-2">
-                        <div class="col-4"><strong>Price</strong></div>
-                        <div class="col-4">{{ snack.pretty_price_string }}</div>
+                <div class="p-2" style="background-color: #212529">
+                    <div class="mt-3">
+                        <div class="row justify-content-center m-2">
+                            <div class="col-4"><strong>Price</strong></div>
+                            <div class="col-4">{{ snack.pretty_price_string }}</div>
+                        </div>
+                        <div class="row justify-content-center m-2">
+                            <div class="col-4"><strong>Date</strong></div>
+                            <div class="col-4">{{ snack.date_found.date }}</div>
+                        </div>
+                        <div class="row justify-content-center m-2">
+                            <div class="col-4"><strong>Created By</strong></div>
+                            <div class="col-4">
+                                {% if snack.snack_author %}{{ snack.snack_author }}{% else %}Admin{% endif %}</div>
+                        </div>
                     </div>
-                    <div class="row justify-content-center m-2">
-                        <div class="col-4"><strong>Date</strong></div>
-                        <div class="col-4">{{ snack.date_found.date}}</div>
+                    <div class="mt-5">
+                        <h4>{{ snack.store.name }} in {{ snack.store.city }}</h4>
+                        <hr class="w-50">
+                        {% for other_snack in snack.store.snack_set.all %}
+                            {% if not other_snack.name == snack.name %}
+                                <h6><a href="{% url 'food:snack_details' other_snack.id %}">{{ other_snack }}</a></h6>
+                            {% endif %}
+                        {% endfor %}
                     </div>
-                    <div class="row justify-content-center m-2">
-                        <div class="col-4"><strong>Created By</strong></div>
-                        <div class="col-4">{% if snack.snack_author %}{{ snack.snack_author }}{% else %}Admin{% endif %}</div>
-                    </div>
-                </div>
-                <div class="mt-5">
-                    <h4>{{ snack.store.name }} in {{ snack.store.city }}</h4>
-                    <hr class="w-50">
-                    {% for other_snack in snack.store.snack_set.all %}
-                        {% if not other_snack.name == snack.name %}
-                            <h6><a  href="{% url 'food:snack_details' other_snack.id %}">{{ other_snack }}</a></h6>
-                        {% endif %}
-                    {% endfor %}
                 </div>
             </div>
         </div>
