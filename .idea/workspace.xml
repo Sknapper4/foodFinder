@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="990d4571-bdfc-4703-b845-f62bb488b45e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/food/templates/food/cities.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/templates/food/cities.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodFinder/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/foodFinder/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,15 +49,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/food/templates/food/store_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/food/templates/food/store_details.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="215">
@@ -75,6 +67,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/foodFinder/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="e#311#320#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/food/templates/food/cities.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="307">
@@ -86,11 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/food/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -159,7 +160,6 @@
         <option value="$PROJECT_DIR$/food/templates/food/store_list.html" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/foodFinder/settings.py" />
         <option value="$PROJECT_DIR$/food/templates/food/snack_list.html" />
         <option value="$PROJECT_DIR$/food/templates/food/my_snacks.html" />
         <option value="$PROJECT_DIR$/food/templates/food/city_detail.html" />
@@ -174,6 +174,7 @@
         <option value="$PROJECT_DIR$/food/templates/food/store_details.html" />
         <option value="$PROJECT_DIR$/foodFinder/urls.py" />
         <option value="$PROJECT_DIR$/food/templates/food/cities.html" />
+        <option value="$PROJECT_DIR$/foodFinder/settings.py" />
       </list>
     </option>
   </component>
@@ -212,6 +213,11 @@
               <item name="food" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="food" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="foodFinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="foodFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="foodFinder" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -299,13 +305,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63069000" />
+    <option name="totallyTimeSpent" value="63809000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22818312" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22818312" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -320,7 +326,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053364" side_tool="true" weight="0.24408603" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4994664" visible="true" weight="0.4015748" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.4994664" visible="true" weight="0.4015748" />
       <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -497,16 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/foodFinder/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="955">
-          <caret line="101" column="5" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
-          <folding>
-            <element signature="e#311#320#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/food/templates/food/create_store.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -615,16 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/food/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/food/templates/food/snack_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
@@ -639,6 +625,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/food/templates/food/cities.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/foodFinder/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -646,10 +646,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/food/templates/food/cities.html">
+    <entry file="file://$PROJECT_DIR$/foodFinder/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        <state relative-caret-position="123">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#311#320#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
