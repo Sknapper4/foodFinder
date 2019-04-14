@@ -1,6 +1,6 @@
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render, get_object_or_404
-from django.template import loader
+from django.shortcuts import render, get_object_or_404, render_to_response
+from django.template import loader, RequestContext
 from django.contrib.auth.decorators import login_required
 from .models import Snack, Store
 from .forms import CreateStore, CreateSnack
@@ -70,7 +70,7 @@ def create_snack(request):
             new_snack = form.save(commit=False)
             new_snack.snack_author = request.user
             new_snack.save()
-            return HttpResponseRedirect('/food/')
+            return HttpResponseRedirect('/')
     else:
         form = CreateSnack()
         return render(request, 'food/create_snack.html', {'form': form})
@@ -82,7 +82,7 @@ def create_store(request):
         form = CreateStore(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/food/')
+            return HttpResponseRedirect('/')
     else:
         form = CreateStore()
         return render(request, 'food/create_store.html', {'form': form})
@@ -108,3 +108,8 @@ def city_details(request, store_id):
         'city_store_list': city_store_list,
     }
     return render(request, 'food/city_detail.html', context)
+
+
+# 404 error
+def bad_request(request):
+    return render(request, '404.html')

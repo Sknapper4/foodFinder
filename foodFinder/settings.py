@@ -26,9 +26,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
-DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
-
+DEBUG = False
+# DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+TEMPLATE_DEBUG = DEBUG
 ALLOWED_HOSTS = []
 
 
@@ -129,7 +129,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (os.path.join('static'), )
 
-LOGIN_REDIRECT_URL = '/food'
+LOGIN_REDIRECT_URL = ''
 LOGOUT_REDIRECT_URL = '/accounts/login'
 
 # Configure Django App for Heroku
