@@ -57,3 +57,13 @@ B
 foodFinder/urls.py,9/5/9518f0a0bce02a616f5eb795068e5f51ffa4e716
 G
 food/templates/404.html,0/a/0a59f89835288b03fccac511480393b5ca15dbcf
+@
+accounts/urls.py,6/0/605dfdd3d50bf83b921d6fff90cbd98052a71d27
+A
+accounts/tests.py,d/d/dd34e9e1474cddb9e5d2f2e680bd1cb27ebbab6e
+@
+accounts/apps.py,1/0/105856a1a16213228e6bf93c0ff567a0b51380c4
+A
+accounts/admin.py,a/3/a3360866a37a1817d2b7bff9b4bc78c975e3b58e
+A
+accounts/views.py,b/a/ba7590f6f358542018b74d55cb2e357917bab56c
