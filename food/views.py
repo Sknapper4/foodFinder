@@ -10,8 +10,8 @@ from django.db.models import Min
 
 
 def index(request):
-    snacks = Snack.objects.all()[:30]
-    stores = Store.objects.all()[:30]
+    snacks = Snack.objects.all().order_by('date_found').reverse()[:30]
+    stores = Store.objects.all().order_by('name')
     template = loader.get_template('food/index.html')
     context = {
         'snacks': snacks,
